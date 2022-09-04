@@ -16,7 +16,7 @@ public class Contents {
 
   @Id @GeneratedValue
   @Column(name = "contentsId")
-  private long id;
+  private Long id;
   @Column(name = "contentsType")
   private char type;
   @Column(name = "contentsCategory")

@@ -1,5 +1,9 @@
 package sidepj.learningchain.repository;
 
-public class ContentsRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import sidepj.learningchain.domain.Contents;
+
+public interface ContentsRepository extends JpaRepository<Contents, Long> {
 
 }
