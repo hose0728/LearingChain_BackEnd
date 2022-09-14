@@ -13,3 +13,4 @@ ${AnsiColor.CYAN}!  |____|_____|/|____|     | /|____|  |____||____| |____| |____
 ${AnsiColor.BRIGHT_CYAN}!    \(    )/     \( |_____|/   \(      )/    \(     )/     \(       )/    \(       \(       )/     \( |____|/           \( |____|/   \(     )/    \(      )/    \(       \(       )/
 ${AnsiColor.BRIGHT_BLACK}!     '    '       '    )/       '      '      '     '       '       '      '        '       '       '   )/               '   )/       '     '      '      '      '        '       '
 ${AnsiColor.BLACK}!                       '                                                                                '                    '
+${AnsiColor.BRIGHT_WHITE}!
