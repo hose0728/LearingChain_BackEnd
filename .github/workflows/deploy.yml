@@ -33,10 +33,16 @@ jobs:
 
       # Gradle Build
       - name: Build with Gradle
-        uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
-        with:
-          gradle-version: 7.4.1
-          arguments: clean build -x test
+        run: |
+          cd ./LearningChain
+          ./gradlew build
+          
+      # Gradle Build
+     # - name: Build with Gradle
+      #  uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
+       # with:
+        #  gradle-version: 7.4.1
+         # arguments: clean build -x test
 
       # AWS 인증
       - name: Configure AWS credentials
