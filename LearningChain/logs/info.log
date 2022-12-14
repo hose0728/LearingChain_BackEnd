@@ -1,0 +1,206 @@
+[2022-09-14 21:53:09.763][ERROR][main]org.springframework.boot.SpringApplication Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.ConsoleAppender[console] - No encoder set for the appender named "console".
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:328)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:282)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:240)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:85)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:66)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:120)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:114)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:65)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at sidepj.learningchain.LearningChainApplication.main(LearningChainApplication.java:10)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.ConsoleAppender[console] - No encoder set for the appender named "console".
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:179)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:80)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:132)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:313)
+	... 18 common frames omitted
+[2022-09-14 21:59:09.768][INFO ][main]sidepj.learningchain.LearningChainApplication Starting LearningChainApplication using Java 11.0.11 on DESKTOP-9GSCKCP with PID 20392 (C:\Users\hose0\Desktop\BackEnd\LearningChain\build\classes\java\main started by hose0 in C:\Users\hose0\Desktop\BackEnd\LearningChain)
+[2022-09-14 21:59:09.771][INFO ][main]sidepj.learningchain.LearningChainApplication No active profile set, falling back to 1 default profile: "default"
+[2022-09-14 21:59:10.778][INFO ][main]org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2022-09-14 21:59:10.876][INFO ][main]org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 78 ms. Found 1 JPA repository interfaces.
+[2022-09-14 21:59:11.623][INFO ][main]org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8080 (http)
+[2022-09-14 21:59:11.636][INFO ][main]org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8080"]
+[2022-09-14 21:59:11.637][INFO ][main]org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2022-09-14 21:59:11.637][INFO ][main]org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.63]
+[2022-09-14 21:59:11.909][INFO ][main]org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2022-09-14 21:59:11.909][INFO ][main]org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 2067 ms
+[2022-09-14 21:59:12.194][INFO ][main]com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+[2022-09-14 21:59:12.388][INFO ][main]com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+[2022-09-14 21:59:12.579][INFO ][main]org.hibernate.Version HHH000412: Hibernate ORM core version 5.6.9.Final
+[2022-09-14 21:59:13.087][INFO ][main]org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2022-09-14 21:59:13.359][INFO ][main]org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2022-09-14 21:59:14.242][INFO ][main]p6spy #1663160354242 | took 2ms | statement | connection 2| url jdbc:h2:mem:6d00d5f4-4702-4336-a2d7-de65694e78ac
+drop table if exists contents CASCADE 
+drop table if exists contents CASCADE ;
+[2022-09-14 21:59:14.244][INFO ][main]p6spy #1663160354244 | took 1ms | statement | connection 2| url jdbc:h2:mem:6d00d5f4-4702-4336-a2d7-de65694e78ac
+drop sequence if exists hibernate_sequence
+drop sequence if exists hibernate_sequence;
+[2022-09-14 21:59:14.250][INFO ][main]p6spy #1663160354250 | took 2ms | statement | connection 3| url jdbc:h2:mem:6d00d5f4-4702-4336-a2d7-de65694e78ac
+create sequence hibernate_sequence start with 1 increment by 1
+create sequence hibernate_sequence start with 1 increment by 1;
+[2022-09-14 21:59:14.260][INFO ][main]p6spy #1663160354260 | took 8ms | statement | connection 3| url jdbc:h2:mem:6d00d5f4-4702-4336-a2d7-de65694e78ac
+create table contents (contents_id bigint not null, contents_body varchar(255), contents_category char(255), contents_nrc_cnt integer, contents_rec_cnt integer, contents_tags varchar(255), contents_title varchar(255), contents_type char(255), contents_url varchar(255), primary key (contents_id))
+create table contents (contents_id bigint not null, contents_body varchar(255), contents_category char(255), contents_nrc_cnt integer, contents_rec_cnt integer, contents_tags varchar(255), contents_title varchar(255), contents_type char(255), contents_url varchar(255), primary key (contents_id));
+[2022-09-14 21:59:14.265][INFO ][main]org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2022-09-14 21:59:14.278][INFO ][main]org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2022-09-14 21:59:14.333][WARN ][main]org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2022-09-14 21:59:15.015][INFO ][main]org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-8080"]
+[2022-09-14 21:59:15.067][INFO ][main]org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8080 (http) with context path ''
+[2022-09-14 21:59:15.101][INFO ][main]sidepj.learningchain.LearningChainApplication Started LearningChainApplication in 6.153 seconds (JVM running for 8.644)
+[2022-09-14 22:00:09.687][INFO ][SpringApplicationShutdownHook]org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2022-09-14 22:00:09.689][INFO ][SpringApplicationShutdownHook]org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+[2022-09-14 22:00:09.694][INFO ][SpringApplicationShutdownHook]p6spy #1663160409694 | took 4ms | statement | connection 4| url jdbc:h2:mem:6d00d5f4-4702-4336-a2d7-de65694e78ac
+drop table if exists contents CASCADE 
+drop table if exists contents CASCADE ;
+[2022-09-14 22:00:09.696][INFO ][SpringApplicationShutdownHook]p6spy #1663160409696 | took 0ms | statement | connection 4| url jdbc:h2:mem:6d00d5f4-4702-4336-a2d7-de65694e78ac
+drop sequence if exists hibernate_sequence
+drop sequence if exists hibernate_sequence;
+[2022-09-14 22:00:09.698][INFO ][SpringApplicationShutdownHook]com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+[2022-09-14 22:00:09.703][INFO ][SpringApplicationShutdownHook]com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+[2022-09-14 22:00:17.016][INFO ][main]sidepj.learningchain.LearningChainApplication Starting LearningChainApplication using Java 11.0.11 on DESKTOP-9GSCKCP with PID 25464 (C:\Users\hose0\Desktop\BackEnd\LearningChain\build\classes\java\main started by hose0 in C:\Users\hose0\Desktop\BackEnd\LearningChain)
+[2022-09-14 22:00:17.019][INFO ][main]sidepj.learningchain.LearningChainApplication No active profile set, falling back to 1 default profile: "default"
+[2022-09-14 22:00:17.925][INFO ][main]org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2022-09-14 22:00:18.000][INFO ][main]org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 61 ms. Found 1 JPA repository interfaces.
+[2022-09-14 22:00:18.621][INFO ][main]org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8080 (http)
+[2022-09-14 22:00:18.633][INFO ][main]org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8080"]
+[2022-09-14 22:00:18.633][INFO ][main]org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2022-09-14 22:00:18.633][INFO ][main]org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.63]
+[2022-09-14 22:00:18.896][INFO ][main]org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2022-09-14 22:00:18.896][INFO ][main]org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1820 ms
+[2022-09-14 22:00:19.169][INFO ][main]com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+[2022-09-14 22:00:19.330][INFO ][main]com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+[2022-09-14 22:00:19.473][INFO ][main]org.hibernate.Version HHH000412: Hibernate ORM core version 5.6.9.Final
+[2022-09-14 22:00:19.687][INFO ][main]org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2022-09-14 22:00:19.864][INFO ][main]org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2022-09-14 22:00:20.633][INFO ][main]p6spy #1663160420633 | took 3ms | statement | connection 2| url jdbc:h2:mem:98896051-e561-43c0-9c65-01ef7cdb7904
+drop table if exists contents CASCADE 
+drop table if exists contents CASCADE ;
+[2022-09-14 22:00:20.635][INFO ][main]p6spy #1663160420635 | took 1ms | statement | connection 2| url jdbc:h2:mem:98896051-e561-43c0-9c65-01ef7cdb7904
+drop sequence if exists hibernate_sequence
+drop sequence if exists hibernate_sequence;
+[2022-09-14 22:00:20.642][INFO ][main]p6spy #1663160420642 | took 2ms | statement | connection 3| url jdbc:h2:mem:98896051-e561-43c0-9c65-01ef7cdb7904
+create sequence hibernate_sequence start with 1 increment by 1
+create sequence hibernate_sequence start with 1 increment by 1;
+[2022-09-14 22:00:20.650][INFO ][main]p6spy #1663160420650 | took 6ms | statement | connection 3| url jdbc:h2:mem:98896051-e561-43c0-9c65-01ef7cdb7904
+create table contents (contents_id bigint not null, contents_body varchar(255), contents_category char(255), contents_nrc_cnt integer, contents_rec_cnt integer, contents_tags varchar(255), contents_title varchar(255), contents_type char(255), contents_url varchar(255), primary key (contents_id))
+create table contents (contents_id bigint not null, contents_body varchar(255), contents_category char(255), contents_nrc_cnt integer, contents_rec_cnt integer, contents_tags varchar(255), contents_title varchar(255), contents_type char(255), contents_url varchar(255), primary key (contents_id));
+[2022-09-14 22:00:20.654][INFO ][main]org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2022-09-14 22:00:20.669][INFO ][main]org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2022-09-14 22:00:20.720][WARN ][main]org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2022-09-14 22:00:21.413][INFO ][main]org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-8080"]
+[2022-09-14 22:00:21.437][INFO ][main]org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8080 (http) with context path ''
+[2022-09-14 22:00:21.454][INFO ][main]sidepj.learningchain.LearningChainApplication Started LearningChainApplication in 5.21 seconds (JVM running for 6.907)
+[2022-09-14 22:01:34.297][INFO ][http-nio-8080-exec-1]org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2022-09-14 22:01:34.298][INFO ][http-nio-8080-exec-1]org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+[2022-09-14 22:01:34.299][INFO ][http-nio-8080-exec-1]org.springframework.web.servlet.DispatcherServlet Completed initialization in 1 ms
+[2022-09-14 22:01:34.355][INFO ][http-nio-8080-exec-1]sidepj.learningchain.controller.TestController 로그 테스트
+[2022-09-14 22:41:24.290][INFO ][SpringApplicationShutdownHook]org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2022-09-14 22:41:24.296][INFO ][SpringApplicationShutdownHook]org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+[2022-09-14 22:41:24.313][INFO ][SpringApplicationShutdownHook]p6spy #1663162884313 | took 9ms | statement | connection 4| url jdbc:h2:mem:98896051-e561-43c0-9c65-01ef7cdb7904
+drop table if exists contents CASCADE 
+drop table if exists contents CASCADE ;
+[2022-09-14 22:41:24.315][INFO ][SpringApplicationShutdownHook]p6spy #1663162884315 | took 0ms | statement | connection 4| url jdbc:h2:mem:98896051-e561-43c0-9c65-01ef7cdb7904
+drop sequence if exists hibernate_sequence
+drop sequence if exists hibernate_sequence;
+[2022-09-14 22:41:24.322][INFO ][SpringApplicationShutdownHook]com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+[2022-09-14 22:41:24.330][INFO ][SpringApplicationShutdownHook]com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+[2022-09-14 23:19:05.956][INFO ][main]sidepj.learningchain.LearningChainApplication Starting LearningChainApplication using Java 11.0.11 on DESKTOP-9GSCKCP with PID 28340 (C:\Users\hose0\Desktop\BackEnd\LearningChain\build\classes\java\main started by hose0 in C:\Users\hose0\Desktop\BackEnd\LearningChain)
+[2022-09-14 23:19:05.966][INFO ][main]sidepj.learningchain.LearningChainApplication No active profile set, falling back to 1 default profile: "default"
+[2022-09-14 23:19:07.763][INFO ][main]org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2022-09-14 23:19:07.949][INFO ][main]org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 158 ms. Found 1 JPA repository interfaces.
+[2022-09-14 23:19:10.111][INFO ][main]org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8080 (http)
+[2022-09-14 23:19:10.139][INFO ][main]org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8080"]
+[2022-09-14 23:19:10.141][INFO ][main]org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2022-09-14 23:19:10.142][INFO ][main]org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.63]
+[2022-09-14 23:19:10.830][INFO ][main]org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2022-09-14 23:19:10.830][INFO ][main]org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 4739 ms
+[2022-09-14 23:19:11.193][INFO ][main]com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+[2022-09-14 23:19:11.506][INFO ][main]com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+[2022-09-14 23:19:11.674][INFO ][main]org.hibernate.Version HHH000412: Hibernate ORM core version 5.6.9.Final
+[2022-09-14 23:19:11.987][INFO ][main]org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2022-09-14 23:19:12.230][INFO ][main]org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2022-09-14 23:19:13.169][INFO ][main]p6spy #1663165153169 | took 2ms | statement | connection 2| url jdbc:h2:mem:65698b6e-269a-43a0-85b4-201e2f565d77
+drop table if exists contents CASCADE 
+drop table if exists contents CASCADE ;
+[2022-09-14 23:19:13.171][INFO ][main]p6spy #1663165153171 | took 1ms | statement | connection 2| url jdbc:h2:mem:65698b6e-269a-43a0-85b4-201e2f565d77
+drop sequence if exists hibernate_sequence
+drop sequence if exists hibernate_sequence;
+[2022-09-14 23:19:13.177][INFO ][main]p6spy #1663165153177 | took 2ms | statement | connection 3| url jdbc:h2:mem:65698b6e-269a-43a0-85b4-201e2f565d77
+create sequence hibernate_sequence start with 1 increment by 1
+create sequence hibernate_sequence start with 1 increment by 1;
+[2022-09-14 23:19:13.187][INFO ][main]p6spy #1663165153187 | took 8ms | statement | connection 3| url jdbc:h2:mem:65698b6e-269a-43a0-85b4-201e2f565d77
+create table contents (contents_id bigint not null, contents_body varchar(255), contents_category char(255), contents_nrc_cnt integer, contents_rec_cnt integer, contents_tags varchar(255), contents_title varchar(255), contents_type char(255), contents_url varchar(255), primary key (contents_id))
+create table contents (contents_id bigint not null, contents_body varchar(255), contents_category char(255), contents_nrc_cnt integer, contents_rec_cnt integer, contents_tags varchar(255), contents_title varchar(255), contents_type char(255), contents_url varchar(255), primary key (contents_id));
+[2022-09-14 23:19:13.191][INFO ][main]org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2022-09-14 23:19:13.204][INFO ][main]org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2022-09-14 23:19:13.256][WARN ][main]org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2022-09-14 23:19:14.067][INFO ][main]org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-8080"]
+[2022-09-14 23:19:14.115][INFO ][main]org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8080 (http) with context path ''
+[2022-09-14 23:19:14.137][INFO ][main]sidepj.learningchain.LearningChainApplication Started LearningChainApplication in 9.938 seconds (JVM running for 14.243)
+[2022-09-14 23:19:51.384][INFO ][SpringApplicationShutdownHook]org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2022-09-14 23:19:51.385][INFO ][SpringApplicationShutdownHook]org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+[2022-09-14 23:19:51.391][INFO ][SpringApplicationShutdownHook]p6spy #1663165191391 | took 3ms | statement | connection 4| url jdbc:h2:mem:65698b6e-269a-43a0-85b4-201e2f565d77
+drop table if exists contents CASCADE 
+drop table if exists contents CASCADE ;
+[2022-09-14 23:19:51.393][INFO ][SpringApplicationShutdownHook]p6spy #1663165191393 | took 0ms | statement | connection 4| url jdbc:h2:mem:65698b6e-269a-43a0-85b4-201e2f565d77
+drop sequence if exists hibernate_sequence
+drop sequence if exists hibernate_sequence;
+[2022-09-14 23:19:51.404][INFO ][SpringApplicationShutdownHook]com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+[2022-09-14 23:19:51.408][INFO ][SpringApplicationShutdownHook]com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+[2022-09-14 23:27:17.365][INFO ][main]sidepj.learningchain.LearningChainApplication Starting LearningChainApplication using Java 11.0.11 on DESKTOP-9GSCKCP with PID 25984 (C:\Users\hose0\Desktop\BackEnd\LearningChain\build\classes\java\main started by hose0 in C:\Users\hose0\Desktop\BackEnd\LearningChain)
+[2022-09-14 23:27:17.375][INFO ][main]sidepj.learningchain.LearningChainApplication No active profile set, falling back to 1 default profile: "default"
+[2022-09-14 23:27:20.092][INFO ][main]org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2022-09-14 23:27:20.264][INFO ][main]org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 141 ms. Found 1 JPA repository interfaces.
+[2022-09-14 23:27:21.806][INFO ][main]org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8080 (http)
+[2022-09-14 23:27:21.835][INFO ][main]org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8080"]
+[2022-09-14 23:27:21.836][INFO ][main]org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2022-09-14 23:27:21.837][INFO ][main]org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.63]
+[2022-09-14 23:27:22.431][INFO ][main]org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2022-09-14 23:27:22.431][INFO ][main]org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 4833 ms
+[2022-09-14 23:27:23.020][INFO ][main]com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+[2022-09-14 23:27:23.400][INFO ][main]com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+[2022-09-14 23:27:23.728][INFO ][main]org.hibernate.Version HHH000412: Hibernate ORM core version 5.6.9.Final
+[2022-09-14 23:27:24.251][INFO ][main]org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2022-09-14 23:27:24.704][INFO ][main]org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[2022-09-14 23:27:26.545][INFO ][main]p6spy #1663165646545 | took 4ms | statement | connection 2| url jdbc:h2:mem:0b6a6f05-004a-4a6e-beb5-2882f75e722c
+drop table if exists contents CASCADE 
+drop table if exists contents CASCADE ;
+[2022-09-14 23:27:26.549][INFO ][main]p6spy #1663165646549 | took 2ms | statement | connection 2| url jdbc:h2:mem:0b6a6f05-004a-4a6e-beb5-2882f75e722c
+drop sequence if exists hibernate_sequence
+drop sequence if exists hibernate_sequence;
+[2022-09-14 23:27:26.557][INFO ][main]p6spy #1663165646557 | took 3ms | statement | connection 3| url jdbc:h2:mem:0b6a6f05-004a-4a6e-beb5-2882f75e722c
+create sequence hibernate_sequence start with 1 increment by 1
+create sequence hibernate_sequence start with 1 increment by 1;
+[2022-09-14 23:27:26.571][INFO ][main]p6spy #1663165646571 | took 12ms | statement | connection 3| url jdbc:h2:mem:0b6a6f05-004a-4a6e-beb5-2882f75e722c
+create table contents (contents_id bigint not null, contents_body varchar(255), contents_category char(255), contents_nrc_cnt integer, contents_rec_cnt integer, contents_tags varchar(255), contents_title varchar(255), contents_type char(255), contents_url varchar(255), primary key (contents_id))
+create table contents (contents_id bigint not null, contents_body varchar(255), contents_category char(255), contents_nrc_cnt integer, contents_rec_cnt integer, contents_tags varchar(255), contents_title varchar(255), contents_type char(255), contents_url varchar(255), primary key (contents_id));
+[2022-09-14 23:27:26.579][INFO ][main]org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2022-09-14 23:27:26.599][INFO ][main]org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2022-09-14 23:27:26.685][WARN ][main]org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2022-09-14 23:27:27.893][INFO ][main]org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-8080"]
+[2022-09-14 23:27:27.988][INFO ][main]org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8080 (http) with context path ''
+[2022-09-14 23:27:28.027][INFO ][main]sidepj.learningchain.LearningChainApplication Started LearningChainApplication in 13.033 seconds (JVM running for 22.327)
+[2022-09-14 23:27:33.905][INFO ][SpringApplicationShutdownHook]org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2022-09-14 23:27:33.907][INFO ][SpringApplicationShutdownHook]org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+[2022-09-14 23:27:33.930][INFO ][SpringApplicationShutdownHook]p6spy #1663165653930 | took 21ms | statement | connection 4| url jdbc:h2:mem:0b6a6f05-004a-4a6e-beb5-2882f75e722c
+drop table if exists contents CASCADE 
+drop table if exists contents CASCADE ;
+[2022-09-14 23:27:33.932][INFO ][SpringApplicationShutdownHook]p6spy #1663165653932 | took 0ms | statement | connection 4| url jdbc:h2:mem:0b6a6f05-004a-4a6e-beb5-2882f75e722c
+drop sequence if exists hibernate_sequence
+drop sequence if exists hibernate_sequence;
+[2022-09-14 23:27:33.934][INFO ][SpringApplicationShutdownHook]com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+[2022-09-14 23:27:33.943][INFO ][SpringApplicationShutdownHook]com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
