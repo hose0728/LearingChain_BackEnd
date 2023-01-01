@@ -7,7 +7,8 @@ buildscript {
 plugins {
     id 'org.springframework.boot' version '2.6.8'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
-    id 'org.asciidoctor.convert' version '1.5.8'
+    /*id 'org.asciidoctor.convert' version '1.5.8'*/
+    id "org.asciidoctor.jvm.convert" version "3.3.2"
     id "com.ewerk.gradle.plugins.querydsl" version "1.0.10"
     id 'java'
 
@@ -21,6 +22,7 @@ configurations {
     compileOnly {
         extendsFrom annotationProcessor
     }
+    asciidoctorExt
 }
 
 repositories {
@@ -34,12 +36,15 @@ ext {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
 
     //querydsl 추가
     implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"
     annotationProcessor "com.querydsl:querydsl-apt:${queryDslVersion}"
 
     implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.8.0'
+
+    implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.7.7'
 
     compileOnly 'org.projectlombok:lombok'
     runtimeOnly 'com.h2database:h2'
@@ -51,6 +56,10 @@ dependencies {
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
+
+    asciidoctorExt 'org.springframework.restdocs:spring-restdocs-asciidoctor'
+
+    implementation group: 'org.modelmapper', name: 'modelmapper', version: '3.1.0'
 }
 
 tasks.named('test') {
@@ -59,6 +68,7 @@ tasks.named('test') {
 }
 
 tasks.named('asciidoctor') {
+    configurations 'asciidoctorExt'
     inputs.dir snippetsDir
     dependsOn test
 }
@@ -78,6 +88,26 @@ compileQuerydsl {
     options.annotationProcessorPath = configurations.querydsl
 }
 
-jar {
-    enabled = false
+bootRun {
+    String activeProfile = System.properties['spring.profiles.active']
+    systemProperty "spring.profiles.active", activeProfile
+}
+
+bootJar {
+    dependsOn asciidoctor
+    copy {
+        from "${asciidoctor.outputDir}"
+        into 'BOOT-INF/classes/static/docs'
+    }
+}
+
+task copyDocument(type: Copy) {
+    dependsOn asciidoctor
+
+    from file("build/docs/asciidoc/")
+    into file("src/main/resources/static/docs")
+}
+
+build {
+    dependsOn copyDocument
 }
