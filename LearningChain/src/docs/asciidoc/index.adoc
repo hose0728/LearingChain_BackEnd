@@ -1,0 +1,10 @@
+ifndef::snippets[]
+:snippets: ./build/generated-snippets
+endif::[]
+
+= LearningChain API
+:doctype: book
+:toc: left
+:sectnums:
+:toclevels: 3
+:source-highlighter: highlights
