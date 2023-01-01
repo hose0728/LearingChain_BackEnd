@@ -8,3 +8,34 @@ endif::[]
 :sectnums:
 :toclevels: 3
 :source-highlighter: highlights
+
+== Contents
+=== Contents 등록
+==== Request Example
+include::{snippets}/contents-post/http-request.adoc[]
+==== Request Field
+include::{snippets}/contents-post/request-fields.adoc[]
+==== Response Example
+include::{snippets}/contents-post/response-body.adoc[]
+==== Response Field
+include::{snippets}/contents-post/response-fields.adoc[]
+
+=== Contents 목록 조회
+==== Request Example
+include::{snippets}/contents-get/http-request.adoc[]
+==== Request Field
+include::{snippets}/contents-get/request-fields.adoc[]
+==== Response Example
+include::{snippets}/contents-get/response-body.adoc[]
+==== Response Field
+include::{snippets}/contents-get/response-fields.adoc[]
+
+=== Contents 단건 조회
+==== Request Example
+include::{snippets}/contents-get-one/http-request.adoc[]
+==== Request Field
+include::{snippets}/contents-get-one/path-parameters.adoc[]
+==== Response Example
+include::{snippets}/contents-get-one/response-body.adoc[]
+==== Response Field
+include::{snippets}/contents-get-one/response-fields.adoc[]

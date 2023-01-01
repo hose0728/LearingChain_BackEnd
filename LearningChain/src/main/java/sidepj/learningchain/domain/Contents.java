@@ -1,6 +1,8 @@
 package sidepj.learningchain.domain;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -9,6 +11,7 @@ import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import sidepj.learningchain.domain.dto.ContentsResponse;
 
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -54,4 +57,33 @@ public class Contents {
     this.files = files;
     this.reviews = reviews;
   }
+
+  public void addContentsTag(List<ContentsTag> contentsTags) {
+    this.tags = contentsTags;
+
+    for(ContentsTag contentsTag : contentsTags) {
+      contentsTag.setContents(this);
+    }
+  }
+
+  public ContentsResponse toResponseDto() {
+    Set<String> tags = new HashSet<>();
+
+    for(ContentsTag contentsTag : this.getTags()) {
+      tags.add(contentsTag.getTag().getName());
+    }
+
+    ContentsResponse response = ContentsResponse.builder()
+        .id(this.getId())
+        .type(this.getType())
+        .category(this.getCategory())
+        .title(this.getTitle())
+        .body(this.getBody())
+        .url(this.getUrl())
+        .tags(tags)
+        .build();
+
+    return response;
+  }
+
 }
