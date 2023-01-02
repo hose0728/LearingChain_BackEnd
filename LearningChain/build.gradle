@@ -101,6 +101,10 @@ bootJar {
     }
 }
 
+jar {
+    enabled = false
+}
+
 task copyDocument(type: Copy) {
     dependsOn asciidoctor
 

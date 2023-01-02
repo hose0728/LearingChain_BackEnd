@@ -35,7 +35,7 @@ jobs:
       - name: Build with Gradle
         run: |
           cd ./LearningChain
-          ./gradlew clean build -x test
+          ./gradlew clean build -x test -x asciidoctor
           
       # Gradle Build
      # - name: Build with Gradle
