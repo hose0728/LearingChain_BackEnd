@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true" scanPeriod="30 seconds">
-    <property name="LOG_PATH" value="./logs"/>
+    <springProfile name="local">
+        <property name="LOG_PATH" value="./logs"/>
+    </springProfile>
+    <springProfile name="dev">
+        <property name="LOG_PATH" value="/home/ubuntu/app/logs"/>
+    </springProfile>
 
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
